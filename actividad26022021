@@ -1,0 +1,45 @@
+# Basado en las edades de los asistentes a clase usar las utilidades de NumPy para:
+# Gestionar los datos
+
+
+from matplotlib import pyplot as plt
+import numpy as np
+
+
+edad = np.array([[23, 20, 22],
+                 [21, 25, 25]])
+
+# Calcular el rango(ptp)
+print(np.ptp(edad))
+print('\n')
+
+print(np.ptp(edad, axis=1))
+print('\n')
+
+print(np.ptp(edad, axis=0))
+print('\n')
+
+# La mediana
+print(np.median(edad))
+print('\n')
+
+print(np.median(edad, axis=1))
+print('\n')
+
+
+print(np.median(edad, axis=0))
+print('\n')
+
+# Los tres cuartiles
+
+np.percentile(edad, 3)
+
+# La desviación estándar
+
+print(np.std(edad))
+
+# Graficar los datos en barras(Matplotlib)
+a = edad
+plt.hist(a, bins=[21, 22, 23, 24, 25, 26, 27, 28, 29, 30])
+plt.title("Grafica")
+plt.show()
